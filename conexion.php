@@ -1,7 +1,7 @@
 <?php
 
 	// detalles de la conexion
-	$conn_string = "host=localhost port=5433 dbname=get_a_pet user=postgres password=postgres options='--client_encoding=UTF8'";
+	$conn_string = "host=localhost port=5432 dbname=getapet user=postgres password=getapet options='--client_encoding=UTF8'";
 
 	// establecemos una conexion con el servidor postgresSQL
 	$dbconn = pg_connect($conn_string);

@@ -3,22 +3,23 @@
 	include 'conexion.php';
 	echo $_POST['nombre'];
 
-	$form_nombre = $_POST['nombre'];
-	$form_ap_paterno = $_POST['ap_paterno'];
-	$form_ap_materno = $_POST['ap_materno'];
-	$form_email = $_POST['email'];
-	$form_contrasena = $_POST['contrasena'];
-	$form_confirm_contrasena = $_POST['confirmar_contrasena'];
-	$form_direccion = $_POST['direccion'];
-	$form_comuna = $_POST['comuna'];
-	$form_sexo = $_POST['genero'];
-	$form_telefono = $_POST['telefono'];
-	$form_rut = $_POST['rut'];
-
 	echo form_nombre;
 	echo form_comuna;
 
-	$query = "INSERT INTO usuario (usu_nombre, usu_ap_paterno, usu_ap_materno, usu_email, usu_contraseña, usu_direccion, usu_comuna, usu_sexo, usu_telefono, usu_rut) VALUES ($_POST['nombre'], $_POST['ap_paterno'], $_POST['ap_materno'], $_POST['email'], $_POST['contrasena'],  $_POST['confirmar_contrasena'], $_POST['direccion'], $_POST['comuna'], $_POST['genero'], $_POST['telefono'], $_POST['rut'])";
+	$nombre = $_POST['nombre'];
+	$ap_paterno = $_POST['ap_paterno'];
+	$ap_materno = $_POST['ap_materno'];
+	$email = $_POST['email'];
+	$contrasena = $_POST['contrasena']; 
+	$confirmar_contrasena = $_POST['confirmar_contrasena']; 
+	$direccion = $_POST['direccion']; 
+	$comuna = $_POST['comuna']; 
+	$genero = $_POST['genero']; 
+	$telefono = $_POST['telefono']; 
+	$rut = $_POST['rut'];
+	
+	$query = "INSERT INTO usuario (usu_nombre, usu_ap_paterno, usu_ap_materno, usu_email, usu_contraseña, usu_direccion, usu_comuna, usu_sexo, usu_telefono, usu_rut) 
+	VALUES (,'$nombre','$ap_paterno','$ap_materno','$email','$contrasena','$confirmar_contrasena','$direccion','$comuna','$genero','$telefono','$rut' )";
 
 	$result = pg_query($dbconn, $query);
 
