@@ -1,4 +1,4 @@
-<?//php
+<?php
 
 	// detalles de la conexion
 	$conn_string = "host=localhost port=5433 dbname=get_a_pet user=postgres password=postgres options='--client_encoding=UTF8'";
@@ -8,9 +8,9 @@
 
 	// Revisamos el estado de la conexion en caso de errores. 
 	if(!$dbconn) {
-	echo "Error: No se ha podido conectar a la base de datos\n";
+	echo "Error: No se ha podido conectar a la base de datos";
 	} else {
-				echo "Conexión exitosa\n";
+				echo "<p>Conexión exitosa</p>";
 			}
 
 	//$query = 'INSERT INTO test (username) VALUES (\'lashet\')';

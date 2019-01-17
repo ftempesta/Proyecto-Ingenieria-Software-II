@@ -37,7 +37,6 @@
 </head>
 
 <body>
-
   <header id="header" class="header header-hide">
     <div class="container">
 
@@ -50,8 +49,8 @@
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li class="menu-active"><a href="#hero">Inicio</a></li>
-          <li><a href="registrar-usuario.html">Registrar</a></li>
-          <li><a href="iniciar-sesion.html">Iniciar Sesión</a></li>
+          <li><a href="registrar-usuario2.php">Registrar</a></li>
+          <li><a href="iniciar-sesion2.php">Iniciar Sesión</a></li>
           <!--<li><a href="#screenshots">Screenshots</a></li>
           <li><a href="#team">Team</a></li>
           <li><a href="#pricing">Pricing</a></li>-->
@@ -76,6 +75,9 @@
   <section id="hero" class="wow fadeIn">
     <div class="hero-container">
       <h1>Bienvenido a Get a Pet</h1>
+      <?php
+          include 'conexion.php';
+      ?>
       <!--<h2>Elegant Bootstrap Template for Startups, Apps &amp; more...</h2>-->
       <img src="img/hero-img.png" alt="Hero Imgs">
       <a href="#get-started" class="btn-get-started scrollto">Publicar Mascota</a>
