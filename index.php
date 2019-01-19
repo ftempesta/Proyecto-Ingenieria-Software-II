@@ -50,7 +50,7 @@
         <ul class="nav-menu">
           <li class="menu-active"><a href="#hero">Inicio</a></li>
           <li><a href="registrar-usuario2.php">Registrar</a></li>
-          <li><a href="iniciar-sesion2.php">Iniciar Sesión</a></li>
+          <li><a href="iniciar-sesion.php">Iniciar Sesión</a></li>
           <!--<li><a href="#screenshots">Screenshots</a></li>
           <li><a href="#team">Team</a></li>
           <li><a href="#pricing">Pricing</a></li>-->
@@ -76,11 +76,11 @@
     <div class="hero-container">
       <h1>Bienvenido a Get a Pet</h1>
       <?php
-          include 'conexion.php';
+        include 'conexion.php';
       ?>
       <!--<h2>Elegant Bootstrap Template for Startups, Apps &amp; more...</h2>-->
       <img src="img/hero-img.png" alt="Hero Imgs">
-      <a href="#get-started" class="btn-get-started scrollto">Publicar Mascota</a>
+      <a href="publicar-mascota.php" class="btn-get-started scrollto">Publicar Mascota</a>
       <!--<div class="btns">
         <a href="#"><i class="fa fa-apple fa-3x"></i> App Store</a>
         <a href="#"><i class="fa fa-play fa-3x"></i> Google Play</a>

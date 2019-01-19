@@ -49,9 +49,9 @@
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.php">Inicio</a></li>
           <li class="menu-active"><a href="#hero">Registrar</a></li>
-          <li><a href="iniciar-sesion.html">Iniciar Sesión</a></li>
+          <li><a href="iniciar-sesion.php">Iniciar Sesión</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -76,7 +76,7 @@
                                   <form action="registrar.php" method="post" class="contactForm">
                                     <!--Nombre-->
                                     <div class="form-group">
-                                        <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Ingresar Nombre" data-rule="minlen:4"/>
+                                        <input type="text" name="nombre" class="form-control" placeholder="Ingresar Nombre" data-rule="minlen:4"/>
                                         <div class="validation"></div>
                                     </div>
 
@@ -127,7 +127,7 @@
                                             <option value="huechuraba">Huechuraba</option>
                                             <option value="independencia">Independencia</option>
                                             <option value="la-cisterna">La Cisterna</option>
-                                            <option value="la-florida">La Florida</option>                                                </option>
+                                            <option value="la-florida">La Florida</option>                                    
                                             <option value="la-granja">La Granja</option>
                                             <option value="la-pintana">La Pintana</option>
                                             <option value="la-reina">La Reina</option>
@@ -189,7 +189,7 @@
 
 
                                     <!--TODO Arreglar funccion del boton-->
-                                    <div class="text-center"><input type="submit" name="submit" value ="Registar Usuario"></div>
+                                    <div class="text-center"><input type="submit" methor="post" value ="Registar Usuario"></div>
                                   </form>
                                 </div>
                               </div>
@@ -199,9 +199,6 @@
 
         </div>
       </section>
-<? 
-  pg_close($dbconn);
-?>
   <!--==========================
     Footer
   ============================-->

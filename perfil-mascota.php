@@ -72,9 +72,8 @@
                     <img src="img/mascotas/perro.jpg" alt="img" class="img-thumbnail">
                     <h4>Floffy</h4>
                     <p>Perrito muy tranquilo ideal para departamento</p>
-                    <a href="#">Adoptar</a>
-        
                 </div>
+                
             </div>
         </div>
           
