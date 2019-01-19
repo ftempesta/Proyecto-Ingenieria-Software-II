@@ -49,8 +49,8 @@
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="registrar-usuario.html">Registrar</a></li>
+            <li><a href="index.php">Inicio</a></li>
+            <li><a href="registrar-usuario.php">Registrar</a></li>
             <li class="menu-active"><a href="#hero">Iniciar Sesión</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
