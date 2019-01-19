@@ -50,7 +50,7 @@
         <ul class="nav-menu">
           <li class="menu-active"><a href="#hero">Inicio</a></li>
           <li><a href="view/registrar-usuario.php">Registrar</a></li>
-          <li><a href="iniciar-sesion.php">Iniciar Sesión</a></li>
+          <li><a href="view/iniciar-sesion.php">Iniciar Sesión</a></li>
           <!--<li><a href="#screenshots">Screenshots</a></li>
           <li><a href="#team">Team</a></li>
           <li><a href="#pricing">Pricing</a></li>-->

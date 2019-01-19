@@ -72,7 +72,7 @@
                 <div class="row justify-content-center">
                         <div class="col-lg-5 col-md-8">
                                 <div class="form">
-                                  <form action="" method="post" role="form" class="contactForm">
+                                  <form action="../Model/login.php" method="post" role="form" class="contactForm">
                                    <!--Correo Eletronic-->
                                     <div class="form-group">
                                       <input type="email" name="email" class="form-control" id="email" placeholder="Correo Electrónico" data-rule="email" data-msg="Por favor ingrese un correo electrónico válido" />
@@ -94,6 +94,13 @@
 
                                     
                                   </form>
+                                  <script type="text/javascript">
+
+                                  document.getElementById("boton").onclick = function (){
+                                    alert("Usuario Creado!");
+                                    //location.href="../index.php";
+                                  }
+                                </script>
                                 </div>
                               </div>
                         </div>
