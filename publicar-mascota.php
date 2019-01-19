@@ -81,11 +81,11 @@
             <div class="input-group" id="sexo">
                 <span class="radio">
                 <label>
-                    <input type="radio" class="radiobox" name="style-0a2">
+                    <input type="radio" class="radiobox" name="sexo">
                     <span> Macho</span> 
                 </label>
                 <label>
-                    <input type="radio" class="radiobox" name="style-0a2">
+                    <input type="radio" class="radiobox" name="sexo">
                     <span> Hembra</span> 
                 </label>
                 </span>
@@ -105,28 +105,36 @@
 
             <!--Especie-->
             <div class="input-group" id="sexo">
-                    <span class="radio">
-                    <label>
-                        <input type="radio" class="radiobox" name="style-0a2">
-                        <span> Perro</span> 
-                    </label>
-                    <label>
-                        <input type="radio" class="radiobox" name="style-0a2">
-                        <span> Gato</span> 
-                    </label>
-                    </span>
-                </div>
+                <span class="radio">
+                <label>
+                    <input type="radio" class="radiobox" name="especie">
+                    <span> Perro</span> 
+                </label>
+                <label>
+                    <input type="radio" class="radiobox" name="especie">
+                    <span> Gato</span> 
+                </label>
+                </span>
+            </div>
 
             <!-- TODO Comportamiento-->
             <div class="form-group">
-                <input type="password" name="contrasena" class="form-control" id="contrasena" placeholder="Ingresar Contraseña"/>
+                <textarea class="form-control" name="comportamiento" rows="5" data-msg="Please write something for us" placeholder="Comportamiento usual de la mascota"></textarea>
                 <div class="validation"></div>
             </div>
 
-                <!--Chipe de rastreo-->
-                <div class="form-group">
-                <input type="text" name="chipe_rastreo" class="form-control" id="chipe_rastreo" placeholder="Chipe de rastreo"/>
-                <div class="validation"></div>
+            <!--Chipe de rastreo-->
+            <div class="input-group" id="chip_rastreo">
+                <span class="radio">
+                <label>
+                    <input type="radio" class="radiobox" name="chip_rastreo">
+                    <span> Sí</span> 
+                </label>
+                <label>
+                    <input type="radio" class="radiobox" name="chip_rastreo">
+                    <span> No</span> 
+                </label>
+                </span>
             </div>
 
             <!--Vacunas-->
@@ -142,12 +150,13 @@
                 <div class="validation"></div>
             </div>
 
-                <!--TODO Raza-->
-                <div class="form-group">
-                <input type="text" name="rut" class="form-control" id="rut" placeholder="Ingresar RUT" data-msg="Por favor ingrese un RUT válido" data-rule="minlen:4"/>
+            <!--Raza-->
+            <div class="form-group">
+                <input type="text" name="raza" class="form-control" id="raza" placeholder="Raza de la mascota" data-msg="Por favor ingrese un RUT válido" data-rule="minlen:4"/>
                 <div class="validation"></div>
             </div>
 
+            <!--Descripcion-->
             <div class="form-group">
                 <textarea class="form-control" name="descripcion" rows="5" data-msg="Please write something for us" placeholder="Descripción de la mascota"></textarea>
                 <div class="validation"></div>
