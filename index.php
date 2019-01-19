@@ -76,11 +76,11 @@
     <div class="hero-container">
       <h1>Bienvenido a Get a Pet</h1>
       <?php
-        include 'conexion.php';
+          include 'conexion.php';
       ?>
       <!--<h2>Elegant Bootstrap Template for Startups, Apps &amp; more...</h2>-->
       <img src="img/hero-img.png" alt="Hero Imgs">
-      <a href="publicar-mascota.php" class="btn-get-started scrollto">Publicar Mascota</a>
+      <a href="#get-started" class="btn-get-started scrollto">Publicar Mascota</a>
       <!--<div class="btns">
         <a href="#"><i class="fa fa-apple fa-3x"></i> App Store</a>
         <a href="#"><i class="fa fa-play fa-3x"></i> Google Play</a>
