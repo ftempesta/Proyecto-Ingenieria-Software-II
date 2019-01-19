@@ -2,41 +2,40 @@
 
 	include 'conexion.php';
 	$form_nombre =  htmlspecialchars($_POST["nombre"]);
-	echo $form_nombre;
-
-	/*
 	echo $_POST['nombre'];
 
-	echo form_nombre;
-	echo form_comuna;
-
-	$nombre = $_POST['nombre'];
-	$ap_paterno = $_POST['ap_paterno'];
-	$ap_materno = $_POST['ap_materno'];
-	$email = $_POST['email'];
-	$contrasena = $_POST['contrasena']; 
-	$confirmar_contrasena = $_POST['confirmar_contrasena']; 
-	$direccion = $_POST['direccion']; 
-	$comuna = $_POST['comuna']; 
-	$genero = $_POST['genero']; 
-	$telefono = $_POST['telefono']; 
-	$rut = $_POST['rut'];
-	
-	$query = "INSERT INTO usuario (usu_nombre, usu_ap_paterno, usu_ap_materno, usu_email, usu_contraseña, usu_direccion, usu_comuna, usu_sexo, usu_telefono, usu_rut) 
-	VALUES (,'$nombre','$ap_paterno','$ap_materno','$email','$contrasena','$confirmar_contrasena','$direccion','$comuna','$genero','$telefono','$rut' )";
-
-	$result = pg_query($dbconn, $query);
-	*/
-
-
+	$form_ap_paterno =  htmlspecialchars($_POST['ap_paterno']);
+	echo $_POST['ap_paterno'];
+	$form_ap_materno =  htmlspecialchars($_POST['ap_materno']);
+	echo $_POST['ap_materno'];
+	$form_email =  htmlspecialchars($_POST['email']);
+	echo $_POST['email'];
+	$form_contrasena =  htmlspecialchars($_POST['contrasena']);
+	echo $_POST['contrasena'];
+	$form_confirm_contrasena =  htmlspecialchars($_POST['confirmar_contrasena']);
+	echo $_POST['confirmar_contrasena'];
+	$form_direccion =  htmlspecialchars($_POST['direccion']);
+	echo $_POST['direccion'];
+	$form_comuna =  htmlspecialchars($_POST['comuna']);
+	echo $_POST['comuna'];
+	$form_sexo =  htmlspecialchars($_POST['genero']);
+	echo $_POST['genero'];
+	$form_telefono =  htmlspecialchars($_POST['telefono']);
+	echo $_POST['telefono'];
+	$form_rut =  htmlspecialchars($_POST['rut']);
+	echo $_POST['rut'];
+	$form_edad =  htmlspecialchars($_POST['edad']);
+	echo $_POST['edad'];
 
 	$query = 'insert INTO adoptador
 	(usu_nombre, usu_ap_paterno, usu_ap_materno, usu_email, usu_contrasena, usu_direccion, usu_comuna, usu_edad, usu_sexo, usu_telefono, usu_rut) 
 values 
-	(\'' . $form_nombre . '\', \'Parra\', \'Maldonado\', \'daniel.diaz@mail.com\', \'newpassword1234\', \'av.Los Pajaritos\', \'Maipu\', 34, \'Masculino\', \'+56955555555\', \'18111200-5\');';
+	(\'' . $form_nombre . '\', \'' . $form_ap_paterno . '\', \'' . $form_ap_materno . '\', \'' . $form_email . '\', \'' . $form_contrasena . '\', \'' . $form_direccion . '\', \'' . $form_comuna . '\', \'' . $form_edad . '\', \'' . $form_sexo . '\', \'' . $form_telefono . '\', \'' . $form_rut . '\');';
 	
 	$result = pg_query($dbconn, $query);
 	echo '<h1>Se agregó un nombre</h1>';
 
+	header('Location: index.php');
+	
 	pg_close($dbconn);
 ?>

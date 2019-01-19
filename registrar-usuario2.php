@@ -17,6 +17,8 @@
         <div class="validation"></div>
     </div>
 
+
+
     <!--Correo Eletronic-->
     <div class="form-group">
       <input type="email" name="email" class="form-control" id="email" placeholder="Ingresar Correo Electrónico" data-rule="email" data-msg="Por favor ingrese un correo electrónico válido" />
@@ -25,13 +27,13 @@
 
     <!--Contraseña-->
     <div class="form-group">
-        <input type="password" name="contrasena" class="form-control" id="contrasena" placeholder="Ingresar Contraseña" data-rule="password"/>
+        <input type="password" name="contrasena" class="form-control" id="contrasena" placeholder="Ingresar Contraseña"/>
         <div class="validation"></div>
     </div>
 
      <!--Confirmar Contraseña-->
      <div class="form-group">
-        <input type="password" name="confirmar_contrasena" class="form-control" id="confirmar-contrasena" placeholder="Repetir Contraseña" data-rule="password"/>
+        <input type="password" name="confirmar_contrasena" class="form-control" id="confirmar-contrasena" placeholder="Repetir Contraseña"/>
         <div class="validation"></div>
     </div>
 
@@ -86,6 +88,12 @@
         <input type="radio" name="genero" value="femenino" class="form-control" data-rule="minlen:4"> Femenino
         <input type="radio" name="genero" value="otros" class="form-control" data-rule="minlen:4"> Otros  
         <div class="validation"></div>
+    </div>
+
+    <!--Edad-->
+    <div class="form-group">
+      <input type="text" name="edad" class="form-control" id="edad" placeholder="Ingresar edad"/>
+      <div class="validation"></div>
     </div>
 
     <!--Telefono-->

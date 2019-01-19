@@ -187,7 +187,7 @@
 
 
     <!--TODO Arreglar funccion del boton-->
-    <div class="text-center"><input type="submit" methor="post" id="boton" value ="Registar Usuario"></div>
+    <div class="text-center"><input type="submit" methor="post" value ="Registar Usuario"></div>
   </form>
                                 </div>
                               </div>
@@ -197,12 +197,6 @@
 
         </div>
       </section>
-      <script type="text/javascript">
-        document.getElementById("boton").onclick = function (){
-          alert("Usuario Creado!");
-          location.href="index.php";
-        }
-      </script>
   <!--==========================
     Footer
   ============================-->
