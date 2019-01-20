@@ -23,14 +23,28 @@
 	echo $_POST['raza'];
 	$form_descripcion =  htmlspecialchars($_POST['descripcion']);
     echo $_POST['descripcion'];
-    
+
     // ARREGLAR LOS PARAMETROS DE INSERT EN PERRO O GATO
-	$query = 'insert INTO ' . $form_especie . '
-	(usu_nombre, usu_ap_paterno, usu_ap_materno, usu_email, usu_contrasena, usu_direccion, usu_comuna, usu_edad, usu_sexo, usu_telefono, usu_rut) 
-values 
-	(\'' . $form_nombre . '\', \'' . $form_ap_paterno . '\', \'' . $form_ap_materno . '\', \'' . $form_email . '\', \'' . $form_contrasena . '\', \'' . $form_direccion . '\', \'' . $form_comuna . '\', \'' . $form_edad . '\', \'' . $form_sexo . '\', \'' . $form_telefono . '\', \'' . $form_rut . '\');';
+	//$query = 'insert INTO ' . $form_especie . '
+	//(usu_nombre, usu_ap_paterno, usu_ap_materno, usu_email, usu_contrasena, usu_direccion, usu_comuna, usu_edad, usu_sexo, usu_telefono, usu_rut) 
+//values 
+	//(\'' . $form_nombre . '\', \'' . $form_ap_paterno . '\', \'' . $form_ap_materno . '\', \'' . $form_email . '\', \'' . $form_contrasena . '\', \'' . $form_direccion . '\', \'' . $form_comuna . '\', \'' . $form_edad . '\', \'' . $form_sexo . '\', \'' . $form_telefono . '\', \'' . $form_rut . '\');';
 	
-	$result = pg_query($dbconn, $query);
+	//$result = pg_query($dbconn, $query);
+	//echo '<h1>Se agregó un nombre</h1>';
+
+	// header('Location: ../index.php');
+	
+    // pg_close($dbconn);
+
+
+    $query = 'insert INTO perro
+	(masc_nombre, masc_sexo, masc_edad, masc_edad_meses, masc_peso, masc_especie, masc_comportamiento, masc_chip_rastreo, masc_tipo, masc_vacuna, masc_raza, masc_descripcion, tamano, entrenamiento) 
+values 
+(\'Felipe\', \'masc\', 2, 23, \'3\', \'perro\', \'agresivo\', si, \'ladrador\', \'2\', \'york\', \'asdfasdfasdf\', \'3\', \'false\');';
+	
+    $result = pg_query($dbconn, $query);
+    echo $result ;
 	echo '<h1>Se agregó un nombre</h1>';
 
 	header('Location: ../index.php');
