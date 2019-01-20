@@ -1,5 +1,5 @@
 <?php
-
+	session_start();
 	include 'conexion.php';
 	$form_nombre =  htmlspecialchars($_POST["nombre"]);
 	echo $_POST['nombre'];
@@ -27,7 +27,7 @@
 	$form_edad =  htmlspecialchars($_POST['edad']);
 	echo $_POST['edad'];
 
-	$query = 'insert INTO adoptador
+	$query = 'insert INTO usuario
 	(usu_nombre, usu_ap_paterno, usu_ap_materno, usu_email, usu_contrasena, usu_direccion, usu_comuna, usu_edad, usu_sexo, usu_telefono, usu_rut) 
 values 
 	(\'' . $form_nombre . '\', \'' . $form_ap_paterno . '\', \'' . $form_ap_materno . '\', \'' . $form_email . '\', \'' . $form_contrasena . '\', \'' . $form_direccion . '\', \'' . $form_comuna . '\', \'' . $form_edad . '\', \'' . $form_sexo . '\', \'' . $form_telefono . '\', \'' . $form_rut . '\');';
