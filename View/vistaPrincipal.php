@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,29 +45,22 @@
     <div class="container">
 
       <div id="logo" class="pull-left">
-       <!-- <h1><a href="#body" class="scrollto"><span>e</span>Startup</a></h1> -->
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
       </div>
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li class="menu-active"><a href="#hero">Inicio</a></li>
-          <li><a href="view/registrar-usuario.php">Registrar</a></li>
-          <li><a href="view/iniciar-sesion.php">Iniciar Sesión</a></li>
-          <!--<li><a href="#screenshots">Screenshots</a></li>
-          <li><a href="#team">Team</a></li>
-          <li><a href="#pricing">Pricing</a></li>-->
-          <!--<li class="menu-has-children"><a href="">Drop Down</a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-              <li><a href="#">Drop Down 5</a></li>
-            </ul>
-          </li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#contact">Contact</a></li>-->
+          <?php
+                echo '<li class="menu-active"><a href="../index.php">Inicio</a></li>';
+                if(!$_SESSION['usuario'])
+                {
+                      echo '<li><a href="../View/registrar-usuario.php">Registrar</a></li>';
+                      echo '<li><a href="../View/iniciar-sesion.php">Iniciar Sesión</a></li>';
+                }
+                else
+                {
+                      echo '<li><a href="../Model/cerrar-sesion.php">Cerrar sesión</a></li>';
+                }
+          ?>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -78,16 +75,30 @@
       <?php
           include 'Model/conexion.php';
       ?>
-      <!--<h2>Elegant Bootstrap Template for Startups, Apps &amp; more...</h2>-->
-      <img src="img/hero-img.png" alt="Hero Imgs">
-      <a href="#get-started" class="btn-get-started scrollto">Publicar Mascota</a>
-      <!--<div class="btns">
-        <a href="#"><i class="fa fa-apple fa-3x"></i> App Store</a>
-        <a href="#"><i class="fa fa-play fa-3x"></i> Google Play</a>
-        <a href="#"><i class="fa fa-windows fa-3x"></i> windows</a>
-      </div>-->
+      <?php
+          if(isset($_SESSION['usuario']))
+          {
+            echo '<p>Bienvenido ' . $_SESSION['usuario'] . '</p>';
+          }
+      ?>
+      <img src="View/img/hero-img.png" alt="Hero Imgs">
+      <?php
+          if(isset($_SESSION['usuario']))
+          {
+            echo '<a id="publicar" href="View/publicar-mascota.php" class="btn-get-started scrollto">Publicar Mascota</a>';
+          }
+          else
+          {
+            echo '<a href="" id="publicarr" class="btn-get-started scrollto">Publicar Mascota</a>';
+            echo '<script type = "text/javascript">
+                    document.getElementById("publicarr").onclick = function(){
+                      alert("Inicia sesión para poder publicar una mascota.");
+                    }
+                    </script>';
+          }
+      ?>
     </div>
-  </section><!-- #hero -->
+  </section>
 
   <!--==========================
     Get Started Section
@@ -111,7 +122,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="feature-block">
 
-            <img src="img/mascotas/perro.jpg" alt="img" class="img-thumbnail">
+            <img src="View/img/mascotas/perro.jpg" alt="img" class="img-thumbnail">
             <h4>Floffy</h4>
             <p>Perrito muy tranquilo ideal para departamento</p>
             <a href="#">Adoptar</a>
@@ -125,7 +136,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="feature-block">
 
-            <img src="img/mascotas/timon.jpg" alt="img" class="img-thumbnail">
+            <img src="View/img/mascotas/timon.jpg" alt="img" class="img-thumbnail">
             <h4>Timón</h4>
             <p>Encantadora zuricata conocida por su actuación en el rey león</p>
             <a href="#">Adoptar</a>
@@ -136,7 +147,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="feature-block">
 
-            <img src="img/mascotas/cat.jpg" alt="img" class="img-thumbnail">
+            <img src="View/img/mascotas/cat.jpg" alt="img" class="img-thumbnail">
             <h4>Bigotes</h4>
             <p>Gato muy gruñón y bastardito que se enoja por todo</p>
             <a href="#">Adoptar</a>
@@ -147,7 +158,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="feature-block">
 
-            <img src="img/mascotas/chimuelo.jpg" alt="img" class="img-thumbnail">
+            <img src="View/img/mascotas/chimuelo.jpg" alt="img" class="img-thumbnail">
             <h4>Chimuelo</h4>
             <p>Pajarito muy tímido que le gusta estar siempre muy quieto</p>
             <a href="#">Adoptar</a>
@@ -158,7 +169,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="feature-block">
 
-            <img src="img/mascotas/gato.jpg" alt="img" class="img-thumbnail">
+            <img src="View/img/mascotas/gato.jpg" alt="img" class="img-thumbnail">
             <h4>Garrientos</h4>
             <p>Gato vacunado y buena onda</p>
             <a href="#">Adoptar</a>
@@ -169,7 +180,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="feature-block">
 
-            <img src="img/mascotas/perro2.jpeg" alt="img" class="img-thumbnail">
+            <img src="View/img/mascotas/perro2.jpeg" alt="img" class="img-thumbnail">
             <h4>Firulais</h4>
             <p>Perro muy elegante que come solo comida cara</p>
             <a href="#">Adoptar</a>

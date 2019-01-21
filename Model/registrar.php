@@ -1,9 +1,11 @@
 <?php
 	session_start();
+
 	include 'conexion.php';
 	$form_nombre =  htmlspecialchars($_POST["nombre"]);
 	echo $_POST['nombre'];
-
+	$_SESSION['usuario_nombre'] = htmlspecialchars($_POST["nombre"];
+		
 	$form_ap_paterno =  htmlspecialchars($_POST['ap_paterno']);
 	echo $_POST['ap_paterno'];
 	$form_ap_materno =  htmlspecialchars($_POST['ap_materno']);
@@ -33,7 +35,7 @@ values
 	(\'' . $form_nombre . '\', \'' . $form_ap_paterno . '\', \'' . $form_ap_materno . '\', \'' . $form_email . '\', \'' . $form_contrasena . '\', \'' . $form_direccion . '\', \'' . $form_comuna . '\', \'' . $form_edad . '\', \'' . $form_sexo . '\', \'' . $form_telefono . '\', \'' . $form_rut . '\');';
 	
 	$result = pg_query($dbconn, $query);
-	echo '<h1>Se agregó un nombre</h1>';
+	//echo '<h1>Se agregó un nombre</h1>';
 
 	header('Location: ../index.php');
 	

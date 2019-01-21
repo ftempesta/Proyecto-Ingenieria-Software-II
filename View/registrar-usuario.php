@@ -49,9 +49,14 @@
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li><a href="../index.php">Inicio</a></li>
-          <li class="menu-active"><a href="#hero">Registrar</a></li>
-          <li><a href="iniciar-sesion.php">Iniciar Sesión</a></li>
+          <?php
+                echo '<li class="menu-active"><a href="../index.php">Inicio</a></li>';
+                if(!$_SESSION['usuario'])
+                {
+                      echo '<li><a href="../View/registrar-usuario.php">Registrar</a></li>';
+                      echo '<li><a href="../View/iniciar-sesion.php">Iniciar Sesión</a></li>';
+                }
+          ?>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
