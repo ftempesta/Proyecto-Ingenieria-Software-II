@@ -3,6 +3,8 @@
 	session_start();
 	include 'conexion.php';
 
+
+
 	$email = htmlspecialchars($_POST['email']);
 	$password = htmlspecialchars($_POST['contrasena']);
     
@@ -17,5 +19,4 @@
 	else{
 	echo '<script type="text/javascript">alert("Usuario no existente!");location.href="../View/iniciar-sesion.php";</script>';
     }
-
 ?>
