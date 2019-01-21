@@ -78,7 +78,7 @@
       <?php
           if(isset($_SESSION['usuario']))
           {
-            echo '<p>Bienvenido' . $_SESSION['usuario_nombre'] . '</p>';
+            echo '<p>Bienvenido ' . $_SESSION['usuario_nombre'] . '</p>';
           }
       ?>
       <img src="View/img/hero-img.png" alt="Hero Imgs">
