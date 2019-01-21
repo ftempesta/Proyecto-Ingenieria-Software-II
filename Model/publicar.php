@@ -39,7 +39,7 @@
 	//echo $_POST['chip_rastreo'];
 	$form_vacuna =  htmlspecialchars($_POST['vacuna']);
 	//echo $_POST['vacuna'];
-	$form_telefono =  htmlspecialchars($_POST['tipo']);
+	$form_tipo =  htmlspecialchars($_POST['tipo']);
 	//echo $_POST['tipo'];
 	$form_raza =  htmlspecialchars($_POST['raza']);
 	//echo $_POST['raza'];

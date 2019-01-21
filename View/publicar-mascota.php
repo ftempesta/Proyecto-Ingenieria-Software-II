@@ -39,14 +39,14 @@
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <?php
-                echo '<li class="menu-active"><a href="../index.php">Inicio</a></li>';
-                if(!$_SESSION['usuario'])
-                {
-                      echo '<li><a href="../View/registrar-usuario.php">Registrar</a></li>';
-                      echo '<li><a href="../View/iniciar-sesion.php">Iniciar Sesión</a></li>';
-                }
-          ?>
+	      <?php
+	            echo '<li class="menu-active"><a href="../index.php">Inicio</a></li>';
+	            if(!$_SESSION['usuario'])
+	            {
+	                  echo '<li><a href="../View/registrar-usuario.php">Registrar</a></li>';
+	                  echo '<li><a href="../View/iniciar-sesion.php">Iniciar Sesión</a></li>';
+	            }
+	      ?>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -143,7 +143,7 @@
 
                             <!--TODO Tipo-->
                             <div class="form-group">
-                                <input type="phone" name="tipo" class="form-control" id="telefono" placeholder="Tipo mascota: Hogareño, ideal para depto, etc..."/>
+                                <input type="phone" name="tipo" class="form-control" id="tipo" placeholder="Tipo mascota: Hogareño, ideal para depto, etc..."/>
                                 <div class="validation"></div>
                             </div>
 

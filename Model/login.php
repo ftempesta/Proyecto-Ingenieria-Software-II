@@ -5,9 +5,6 @@
 
 	$email = htmlspecialchars($_POST['email']);
 	$password = htmlspecialchars($_POST['contrasena']);
-
-	echo $email;
-	echo $password;
     
 	$sql = pg_query(
         "SELECT * FROM public.usuario WHERE usu_email = '{$email}' AND usu_contrasena = '{$password}';");

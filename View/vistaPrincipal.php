@@ -118,75 +118,35 @@
     <div class="container">
       
       <div class="row">
+        
+        <?php 
+          include 'conexion.php';
+          $queryGet = "SELECT * FROM public.perro";
+          $rs = pg_query($dbconn, $queryGet) or die("Cannot execute query: $query\n");
+          while ($row = pg_fetch_row($rs)) {
+            echo '<div class="col-md-6 col-lg-4">';
+            echo '  <div class="feature-block">';
+            echo "    <img src=\"$row[12]\" alt=\"img\" class=\"img-thumbnail\">";
+            echo "    <h4>$row[1]</h4>";
+            echo "    <p>$row[11]</p>";
+            echo '    <a href="#">Adoptar</a>';
+            echo '  </div>';
+            echo '</div>';
+          }
 
-        <div class="col-md-6 col-lg-4">
-          <div class="feature-block">
-
-            <img src="View/img/mascotas/perro.jpg" alt="img" class="img-thumbnail">
-            <h4>Floffy</h4>
-            <p>Perrito muy tranquilo ideal para departamento</p>
-            <a href="#">Adoptar</a>
-
-          </div>
-        </div>
-
-
-
-
-        <div class="col-md-6 col-lg-4">
-          <div class="feature-block">
-
-            <img src="View/img/mascotas/timon.jpg" alt="img" class="img-thumbnail">
-            <h4>Timón</h4>
-            <p>Encantadora zuricata conocida por su actuación en el rey león</p>
-            <a href="#">Adoptar</a>
-
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="feature-block">
-
-            <img src="View/img/mascotas/cat.jpg" alt="img" class="img-thumbnail">
-            <h4>Bigotes</h4>
-            <p>Gato muy gruñón y bastardito que se enoja por todo</p>
-            <a href="#">Adoptar</a>
-
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="feature-block">
-
-            <img src="View/img/mascotas/chimuelo.jpg" alt="img" class="img-thumbnail">
-            <h4>Chimuelo</h4>
-            <p>Pajarito muy tímido que le gusta estar siempre muy quieto</p>
-            <a href="#">Adoptar</a>
-
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="feature-block">
-
-            <img src="View/img/mascotas/gato.jpg" alt="img" class="img-thumbnail">
-            <h4>Garrientos</h4>
-            <p>Gato vacunado y buena onda</p>
-            <a href="#">Adoptar</a>
-
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="feature-block">
-
-            <img src="View/img/mascotas/perro2.jpeg" alt="img" class="img-thumbnail">
-            <h4>Firulais</h4>
-            <p>Perro muy elegante que come solo comida cara</p>
-            <a href="#">Adoptar</a>
-
-          </div>
-        </div>
+           $queryGet = "SELECT * FROM public.gato";
+          $rs = pg_query($dbconn, $queryGet) or die("Cannot execute query: $query\n");
+          while ($row = pg_fetch_row($rs)) {
+            echo '<div class="col-md-6 col-lg-4">';
+            echo '  <div class="feature-block">';
+            echo "    <img src=\"$row[12]\" alt=\"img\" class=\"img-thumbnail\">";
+            echo "    <h4>$row[1]</h4>";
+            echo "    <p>$row[11]</p>";
+            echo '    <a href="#">Adoptar</a>';
+            echo '  </div>';
+            echo '</div>';
+          }
+        ?>
         
 
 
