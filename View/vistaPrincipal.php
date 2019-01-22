@@ -11,10 +11,6 @@
   <meta content="" name="keywords">
   <meta content="" name="description">
 
-  <!-- Favicons -->
-  <link href="View/img/favicon.png" rel="icon">
-  <link href="View/img/apple-touch-icon.png" rel="apple-touch-icon">
-
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
 
@@ -23,11 +19,11 @@
   <link href="View/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Libraries CSS Files -->
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="lib/owlcarousel/assets/owl.theme.default.min.css" rel="stylesheet">
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="lib/animate/animate.min.css" rel="stylesheet">
-  <link href="lib/modal-video/css/modal-video.min.css" rel="stylesheet">
+  <link href="View/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="View/lib/owlcarousel/assets/owl.theme.default.min.css" rel="stylesheet">
+  <link href="View/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="View/lib/animate/animate.min.css" rel="stylesheet">
+  <link href="View/lib/modal-video/css/modal-video.min.css" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
   <link href="View/css/style.css" rel="stylesheet">
@@ -49,18 +45,9 @@
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <?php
-                echo '<li class="menu-active"><a href="../index.php">Inicio</a></li>';
-                if(!$_SESSION['usuario'])
-                {
-                      echo '<li><a href="../View/registrar-usuario.php">Registrar</a></li>';
-                      echo '<li><a href="../View/iniciar-sesion.php">Iniciar Sesión</a></li>';
-                }
-                else
-                {
-                      echo '<li><a href="../Model/cerrar-sesion.php">Cerrar sesión</a></li>';
-                }
-          ?>
+          <li class="menu-active"><a href="#hero">Inicio</a></li>
+          <li><a href="View/registrar-usuario.php">Registrar</a></li>
+          <li><a href="View/iniciar-sesion.php">Iniciar Sesión</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -75,28 +62,14 @@
       <?php
           include 'Model/conexion.php';
       ?>
-      <?php
-          if(isset($_SESSION['usuario']))
-          {
-            echo '<p>Bienvenido' . $_SESSION['usuario_nombre'] . '</p>';
-          }
-      ?>
-      <img src="View/img/hero-img.png" alt="Hero Imgs">
-      <?php
-          if(isset($_SESSION['usuario']))
-          {
-            echo '<a id="publicar" href="View/publicar-mascota.php" class="btn-get-started scrollto">Publicar Mascota</a>';
-          }
-          else
-          {
-            echo '<a href="" id="publicarr" class="btn-get-started scrollto">Publicar Mascota</a>';
-            echo '<script type = "text/javascript">
-                    document.getElementById("publicarr").onclick = function(){
-                      alert("Inicia sesión para poder publicar una mascota.");
-                    }
-                    </script>';
-          }
-      ?>
+      <!--<h2>Elegant Bootstrap Template for Startups, Apps &amp; more...</h2>-->
+      <img src="/View/img/hero-img.png" alt="Hero Imgs">
+      <a href="publicar-mascota.php" class="btn-get-started scrollto">Publicar Mascota</a>
+      <!--<div class="btns">
+        <a href="#"><i class="fa fa-apple fa-3x"></i> App Store</a>
+        <a href="#"><i class="fa fa-play fa-3x"></i> Google Play</a>
+        <a href="#"><i class="fa fa-windows fa-3x"></i> windows</a>
+      </div>-->
     </div>
   </section>
 
@@ -118,38 +91,74 @@
     <div class="container">
       
       <div class="row">
-        
-        <?php 
-          include 'conexion.php';
-          $queryGet = "SELECT * FROM public.perro";
-          $rs = pg_query($dbconn, $queryGet) or die("Cannot execute query: $query\n");
-          while ($row = pg_fetch_row($rs)) {
-            echo '<div class="col-md-6 col-lg-4">';
-            echo '  <div class="feature-block">';
-            echo "    <img src=\"$row[12]\" alt=\"img\" class=\"img-thumbnail\">";
-            echo "    <h4>$row[1]</h4>";
-            echo "    <p>$row[11]</p>";
-            echo '    <a href="#">Adoptar</a>';
-            echo '  </div>';
-            echo '</div>';
-          }
 
-           $queryGet = "SELECT * FROM public.gato";
-          $rs = pg_query($dbconn, $queryGet) or die("Cannot execute query: $query\n");
-          while ($row = pg_fetch_row($rs)) {
-            echo '<div class="col-md-6 col-lg-4">';
-            echo '  <div class="feature-block">';
-            echo "    <img src=\"$row[12]\" alt=\"img\" class=\"img-thumbnail\">";
-            echo "    <h4>$row[1]</h4>";
-            echo "    <p>$row[11]</p>";
-            echo '    <a href="#">Adoptar</a>';
-            echo '  </div>';
-            echo '</div>';
-          }
-        ?>
-        
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-block">
+
+            <img src="/View/img/mascotas/perro.jpg" alt="img" class="img-thumbnail">
+            <h4>Floffy</h4>
+            <p>Perrito muy tranquilo ideal para departamento</p>
+            <a href="perfil-mascota.php">Adoptar</a>
+
+          </div>
+        </div>
 
 
+
+
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-block">
+
+            <img src="/View/img/mascotas/timon.jpg" alt="img" class="img-thumbnail">
+            <h4>Timón</h4>
+            <p>Encantadora zuricata conocida por su actuación en el rey león</p>
+            <a href="#">Adoptar</a>
+
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-block">
+
+            <img src="/View/img/mascotas/cat.jpg" alt="img" class="img-thumbnail">
+            <h4>Bigotes</h4>
+            <p>Gato muy gruñón y bastardito que se enoja por todo</p>
+            <a href="#">Adoptar</a>
+
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-block">
+
+            <img src="/View/img/mascotas/chimuelo.jpg" alt="img" class="img-thumbnail">
+            <h4>Chimuelo</h4>
+            <p>Pajarito muy tímido que le gusta estar siempre muy quieto</p>
+            <a href="#">Adoptar</a>
+
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-block">
+
+            <img src="/View/img/mascotas/gato.jpg" alt="img" class="img-thumbnail">
+            <h4>Garrientos</h4>
+            <p>Gato vacunado y buena onda</p>
+            <a href="#">Adoptar</a>
+
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-block">
+
+            <img src="/View/img/mascotas/perro2.jpeg" alt="img" class="img-thumbnail">
+            <h4>Firulais</h4>
+            <p>Perro muy elegante que come solo comida cara</p>
+            <a href="#">Adoptar</a>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -173,89 +182,6 @@
           </div>
         </div>
       </div>
-      
-
-        <!--
-        <div class="col-sm-6 col-md-3 col-lg-2">
-          <div class="list-menu">
-
-            <h4>Abou Us</h4>
-
-            <ul class="list-unstyled">
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Features item</a></li>
-              <li><a href="#">Live streaming</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-            </ul>
-
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-3 col-lg-2">
-          <div class="list-menu">
-
-            <h4>Abou Us</h4>
-
-            <ul class="list-unstyled">
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Features item</a></li>
-              <li><a href="#">Live streaming</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-            </ul>
-
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-3 col-lg-2">
-          <div class="list-menu">
-
-            <h4>Support</h4>
-
-            <ul class="list-unstyled">
-              <li><a href="#">faq</a></li>
-              <li><a href="#">Editor help</a></li>
-              <li><a href="#">Contact us</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-            </ul>
-
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-3 col-lg-2">
-          <div class="list-menu">
-
-            <h4>Abou Us</h4>
-
-            <ul class="list-unstyled">
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Features item</a></li>
-              <li><a href="#">Live streaming</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-            </ul>
-
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="copyrights">
-      <div class="container">
-        <p>&copy; Copyrights eStartup. All rights reserved.</p>
-        <div class="credits">
-        -->
-          <!--
-            All the links in the footer should remain intact.
-            You can delete the links only if you purchased the pro version.
-            Licensing information: https://bootstrapmade.com/license/
-            Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eStartup
-          -->
-          <!--
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
-      </div>
-    </div>
--->
   </footer>
 
 
@@ -263,20 +189,20 @@
 
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
   <!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/superfish/hoverIntent.js"></script>
-  <script src="lib/superfish/superfish.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/modal-video/js/modal-video.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="lib/wow/wow.min.js"></script>
+  <script src="/View/lib/jquery/jquery.min.js"></script>
+  <script src="/View/lib/jquery/jquery-migrate.min.js"></script>
+  <script src="/View/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/View/lib/superfish/hoverIntent.js"></script>
+  <script src="/View/lib/superfish/superfish.min.js"></script>
+  <script src="/View/lib/easing/easing.min.js"></script>
+  <script src="/View/lib/modal-video/js/modal-video.js"></script>
+  <script src="/View/lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="/View/lib/wow/wow.min.js"></script>
   <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
+  <script src="/View/contactform/contactform.js"></script>
 
   <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
+  <script src="/View/js/main.js"></script>
 
 </body>
 </html>
