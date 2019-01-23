@@ -32,6 +32,6 @@
 		echo '<script type="text/javascript">alert("Bienvenido ' . $_SESSION['usuario_nombre'] . '");location.href="../index.php";</script>';
 	}
 	else{
-	echo '<script type="text/javascript">alert("Usuario no existente!");location.href="../View/iniciar-sesion.php";</script>';
+	echo '<script type="text/javascript">alert("Correo o contraseña incorrecta!!");location.href="../View/iniciar-sesion.php";</script>';
     }
 ?>

@@ -119,14 +119,14 @@
 
     <!--Dirección-->
     <div class="form-group">
-        <input type="text" name="direccion" class="form-control" id="direccion" placeholder="Ingresar Comuna" data-rule="minlen:4"/>
+        <input type="text" name="direccion" class="form-control" id="direccion" placeholder="Ingresar Dirección" data-rule="minlen:4"/>
         <div class="validation"></div>
     </div>
 
     <!--Comuna-->
     <div class="form-group">
         <select name="comuna" class="form-control" data-rule="minlen:4">
-            <option>Seleccionar Dirección</option>
+            <option>Seleccionar Comuna</option>
             <option value="cerrillos">Cerrillos</option>
             <option value="cerro-navia">Cerro Navia</option>
             <option value="conchali">Conchalí</option>

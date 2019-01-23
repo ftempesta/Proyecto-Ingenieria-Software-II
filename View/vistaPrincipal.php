@@ -114,20 +114,18 @@
 
       <script type = "text/javascript">
         document.getElementById("perro").onclick = function(){
-            alert("Clickeaste al perro! <?php  session_start(); $_SESSION['filtro'] = "perro";?>");
+            var string = "<?php  session_start(); $_SESSION['filtro'] = "perro";  ?>";
             window.location.href = 'index.php?id=perro';
         }
       </script>
       <script type = "text/javascript">
         document.getElementById("gato").onclick = function(){
-            alert("Clickeaste al gato!");
             var string = "<?php  session_start(); $_SESSION['filtro'] = "gato";  ?>";
             window.location.href = 'index.php?id=gato';
         }
       </script>
       <script type = "text/javascript">
         document.getElementById("borrar").onclick = function(){
-            alert("Clickeaste borrar!");
             var string = "<?php  session_start(); $_SESSION['filtro'] = "";  ?>";
             window.location.href = 'index.php?id=0';
         }

@@ -27,11 +27,14 @@
 	$form_edad =  htmlspecialchars($_POST['edad']);
 	//echo $_POST['edad'];
 	
-	$query = 'INSERT INTO usuario
+	$query = 'INSERT INTO cuentasusuario
 	(usu_nombre, usu_ap_paterno, usu_ap_materno, usu_email, usu_contrasena, usu_direccion, usu_comuna, usu_edad, usu_sexo, usu_telefono, usu_rut) 
 values 
 	(\'' . $form_nombre . '\', \'' . $form_ap_paterno . '\', \'' . $form_ap_materno . '\', \'' . $form_email . '\', \'' . $form_contrasena . '\', \'' . $form_direccion . '\', \'' . $form_comuna . '\', \'' . $form_edad . '\', \'' . $form_sexo . '\', \'' . $form_telefono . '\', \'' . $form_rut . '\');';
 	
+
+	echo '<br>';
+	echo $query;
 	$result = pg_query($dbconn, $query);
 
 	header('Location: ../index.php');

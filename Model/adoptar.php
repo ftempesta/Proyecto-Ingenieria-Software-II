@@ -102,7 +102,7 @@
         echo '    </div>';
         echo '  </div>';
         echo '<section id="hero" class="hero-container">';
-        echo '<center><a id="adoptar3" href="../index.php?id='. $_GET['id'] .'" class="btn-get-started">Volver a Inicio!</a></center>';
+        echo '<center><a id="adoptar3" href="../index.php class="btn-get-started">Volver a Inicio!</a></center>';
         echo '</section>';
         
         echo '</section>';
@@ -118,7 +118,7 @@
   $insertAdopcion = "INSERT INTO adopcion (usu_id, pub_id) VALUES (". $_SESSION['usuario_id'] .", ". $account_type .");";
   $result = pg_query($dbconn, $insertAdopcion);
  
-  $cambiarEstado = "UPDATE publicacion SET pub_estado = 'En_proceso'
+  $cambiarEstado = "UPDATE publicacion SET pub_estado = 'En proceso'
                     WHERE masc_id = ". $_GET['id'] .";";
   $result = pg_query($dbconn ,$cambiarEstado);
 

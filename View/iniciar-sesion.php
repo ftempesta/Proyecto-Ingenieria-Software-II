@@ -98,7 +98,7 @@
                                     <div class="text-center"><button type="submit">Ingresar</button></div> <br>
 
                                     <div align="center"> 
-                                        <a href="registrar-usuario.html">Todavía no eres mienmbro? Registrar</a>
+                                        <a href="registrar-usuario.php">Todavía no eres mienmbro? <em>Registrar</em></a>
                                     </div>
                                   </form>
                                 </div>

@@ -54,7 +54,7 @@
     }
 
 	// Hay que proceder a la creación de la publicación
-	$queryInsertPublicacion = 'INSERT INTO public.publicacion (pub_estado, usu_id, masc_id) values (\'disponible\', \'' . $_SESSION['usuario_id'] . '\', \''. $_SESSION['mascota_id'] .'\')';
+	$queryInsertPublicacion = 'INSERT INTO public.publicacion (pub_estado, usu_id, masc_id) values (\'Disponible\', \'' . $_SESSION['usuario_id'] . '\', \''. $_SESSION['mascota_id'] .'\')';
 
 	$result = pg_query($dbconn, $queryInsertPublicacion);
 	header('Location: ../index.php');
