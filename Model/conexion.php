@@ -16,7 +16,7 @@
 		echo "Error: No se ha podido conectar a la base de datos";
 		} else {
 					$conexion = '<p>Conexión exitosa</p>';
-					echo $conexion;
+					//echo $conexion;
 				}
 
 

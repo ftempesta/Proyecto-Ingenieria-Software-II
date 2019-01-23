@@ -119,7 +119,7 @@
 
     <!--Dirección-->
     <div class="form-group">
-        <input type="text" name="direccion" class="form-control" id="direccion" placeholder="Ingresar Dirección" data-rule="minlen:4"/>
+        <input type="text" name="direccion" class="form-control" id="direccion" placeholder="Ingresar Comuna" data-rule="minlen:4"/>
         <div class="validation"></div>
     </div>
 

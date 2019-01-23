@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Registrar Usuario</title>
+  <title>Get a Pet</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -36,7 +36,7 @@
   ======================================================= -->
 </head>
 
-<body>
+
 
   <header id="header" class="header header-hide">
     <div class="container">
@@ -54,63 +54,15 @@
     </div>
   </header><!-- #header -->
 
-  <!--==========================
-    Visualizar Perfil Mascota
-  ============================-->
-    <section id="contact" class="padd-section wow fadeInUp">
-        <div class="container">
-            <div class="section-title text-center">
-                <!--TODO aparecer el nombre de la mascota-->
-                <h2>Perfil Mascota</h2>
-                    <!--<p>Bienvenidos al perfil de la mascota!</p>-->
-            </div>
-        </div>
+  <body>
 
-        <div class="container">
-            <div class="col-md-6 col-lg-4">
-                <div class="feature-block">
-                    <img src="img/mascotas/perro.jpg" alt="img" class="img-thumbnail">
-                    <h4>Floffy</h4>
-                    <p>Perrito muy tranquilo ideal para departamento</p>
-                </div>
-                
-            </div>
-        </div>
-          
-            <div class="container">
-                <div class="row justify-content-center">
-                        <div class="col-lg-5 col-md-8">
-                                <div class="form">
-                                  <form action="" method="post" role="form" class="contactForm">
-                                   <!--Correo Eletronic-->
-                                    <div class="form-group">
-                                      <input type="email" name="email" class="form-control" id="email" placeholder="Correo Electrónico" data-rule="email" data-msg="Por favor ingrese un correo electrónico válido" />
-                                      <div class="validation"></div>
-                                    </div>
+<div class="container">
+  hola
+</div>
 
-                                    <!--Contraseña-->
-                                    <div class="form-group">
-                                        <input type="password" name="contrasena" class="form-control" id="contrasena" placeholder="Contraseña" data-rule="password"/>
-                                        <div class="validation"></div>
-                                    </div>
 
-                                    <!--TODO Arreglar funccion del boton-->
-                                    <div class="text-center"><button type="submit">Ingresar</button></div> <br>
 
-                                    <div align="center"> 
-                                        <a href="registrar-usuario.html">Todavía no eres mienmbro? Registrar</a>
-                                    </div>
 
-                                    
-                                  </form>
-                                </div>
-                              </div>
-                        </div>
-                    </div>
-                </div>
-
-        </div>
-      </section>
 
   <!--==========================
     Footer

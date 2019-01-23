@@ -40,6 +40,8 @@
       <nav id="nav-menu-container">
         <ul class="nav-menu">
 	      <?php
+              session_start();
+              
 	            echo '<li class="menu-active"><a href="../index.php">Inicio</a></li>';
 	            if(!$_SESSION['usuario'])
 	            {
